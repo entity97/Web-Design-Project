@@ -15,6 +15,7 @@ header {
 nav {
   position: relative; /* Sets the position of the navigation to relative */
   text-align: center; /* Centers the text within the navigation */
+  z-index: 999;
 }
 
 nav ul {
@@ -86,8 +87,10 @@ main{
 
 .menu-item {
   display: flex; /* Displays the menu items as a flexbox */
+  position: relative;
   flex-direction: row; /* Sets the direction of the flexbox to row */
   margin-bottom: 30px; /* Adds a margin to the bottom of each menu item */
+  width: 30%;
 }
 
 .menu-item-image {
@@ -129,6 +132,34 @@ main{
   color: #ff8c00; /* Sets the text color for the menu item price */
 }
 
+.popup {
+  visibility: hidden;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(1, 1);
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 40%;
+  width: 256px;
+  height: 480px;
+  background-color: #a3a121;
+  padding: 20px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.size1 {
+  background-color: #ccc; 
+  color: black; 
+}
+
+.size1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
 @media screen and (max-width: 800px) {
   nav {
     margin-bottom: 20px; /* Adds a margin to the bottom of the navigation on smaller screens */
@@ -141,11 +172,16 @@ main{
 
   .menu-section {
     margin-bottom: 30px; /* Adds a larger margin to the bottom of each menu section on smaller screens */
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    margin-left: 50px;
   }
 
   .menu-item {
     flex-direction: column; /* Sets the direction of the menu item flexbox to column on smaller screens */
     margin-bottom: 20px; /* Adds a smaller margin to the bottom of each menu item on smaller screens */
+    text-align: center;
   }
 
   .menu-item-image {
@@ -153,6 +189,55 @@ main{
     height: auto; /* Allows the height of the menu item image to adjust automatically on smaller screens */
     margin-right: 0; /* Removes the margin to the right of the menu item image on smaller screens */
     margin-bottom: 10px; /* Adds a margin to the bottom of the menu item image on smaller screens */
+  }
+
+  .menu-item-description{
+    width: auto;
+  }
+
+  .popup {
+    visibility: hidden;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(1, 1);
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 40%;
+    width: 128px;
+    height: 800px;
+    background-color: #a3a121;
+    padding: 20px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    z-index: 10;
+  }
+
+  section{
+    overflow-x: scroll;
+    width: 100%;
+  }
+
+  .abt-img {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-right: 20px;
+  }
+
+  .abt-img img{
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .about-content-wrapper{
+    display: block !important;
+    
+  }
+
+  .aboutsection {
+    clip-path: none !important;
   }
 }
 
@@ -368,6 +453,7 @@ button.ghost {
     grid-template-columns: repeat(2, minmax(0, 1fr)); /*two column grid with equal widths, where each column takes 0px and most available space*/
     gap: 2.5rem;
   } 
+
 }
 
 @media (min-width: 1024px) { 
@@ -453,6 +539,7 @@ button.ghost {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /*polygon shape that starts at the top left corner and ends at the bottom left corner*/
   padding-bottom: 10%;
   background-color: coral;
+  padding-top: 2%;
 }
 
 .about-container {
@@ -476,7 +563,13 @@ button.ghost {
   width: 50%;
 }
 
-.img {
+.img-wrapper img{
+  width: 300px;
+  height: 300px;
+}
+
+
+.abt-img {
   width: 300px;
   height: 300px;
   margin: 0 auto;
