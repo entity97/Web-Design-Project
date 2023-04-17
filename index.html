@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Mo's Pizza</title>
+    <!-- Sets the title of the page, which appears in the browser's title bar -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Links to an external stylesheet file -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- Links to a favicon file, which is the icon that appears in the browser's tab or bookmarks bar -->
+  </head>
+
+  <body>
+    <header>
+      <!-- Defines a header section -->
+      <h1>Welcome to MO's Pizza!</h1>
+      <!-- Sets the main heading for the page -->
+    </header>
+
+    <nav id="mynav">
+      <!-- Defines a navigation section -->
+      <ul>
+        <!-- An unordered list -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="mainhead"><h2>Welcome to Deliciousness!</h2></div>
+
+      <div>
+        <p>
+          Welcome to Mo's Pizza, where we believe that pizza is not just a food,
+          but a way of life. We have been serving deliecious, mouth-watering
+          pizzas made with fresh, locally sourced ingredients for years. Our
+          commitment to quality and passionm for creaitng the perfect pizza is
+          what sets us apart. From the classic pepperoni to the more adventurous
+          combinations, we have a pizza for everyone. So come on in, grab a
+          slice, and join us on this delicious journey!
+        </p>
+      </div>
+
+      
+      <div class="newsletter-container">
+        <div class="newsletter-wrapper">
+          <div class="newsletter-grid">
+            <div class="newsletter-grid-wrapper">
+              <img
+                class="newsletter-image"
+                src="https://ouch-cdn2.icons8.com/sKnF2PmYhkmP28DzIm6KqWSknT03UVWjg3FLlGYIOp4/rs:fit:684:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvOTI3/L2U4OWQ2NmZiLTg0/NzEtNDc3NS1hNTA0/LTMwNWRiYmJkNzg0/MC5zdmc.png"
+                alt="Marketing newsletter via computer Illustration in PNG, SVG"
+              />
+            </div>
+            <div class="content-wrapper">
+              <div class="title-wrapper">
+                <h3>Subscribe</h3>
+                <p>
+                  Join our weekly digest. You'll also receive some of our best
+                  posts today.
+                </p>
+                <form action="" class="newsletter-form">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="newsletter-input"
+                    placeholder="Enter your email"
+                  />
+                  <button
+                    type="submit"
+                    class="newsletter-button"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Defines a footer section (information about the site or copyright information) -->
+      <p>&copy; 2023 MO's Pizza</p>
+      <!-- Sets the copyright information -->
+      <p>Call us at: <a href="tel: ">1-800-111-1111</a></p>
+    </footer>
+
+    <script>
+      const navbar = document.querySelector("#mynav");
+
+      navbar.classList.add("homepage-navbar");
+    </script>
+  </body>
+</html>
