@@ -11,15 +11,15 @@
   <body>
 
     <header> <!-- Defines a header section -->
-      <h1>MO's Pizza</h1> <!-- Sets the main heading for the page -->
+      <h1>The Menu</h1> <!-- Sets the main heading for the page -->
     </header>
     
     <nav> <!-- Defines a navigation section -->
       <ul> <!-- An unordered list -->
-        <li><a href="home.html">Home</a></li> 
+        <li><a href="index.html">Home</a></li> 
         <li><a href="menu.html">Menu</a></li> 
-        <li><a href="contactus.html">Contact Us</a></li> 
-        <li><a href="aboutus.html">About Us</a></li> 
+        <li><a href="contact.html">Contact Us</a></li> 
+        <li><a href="about.html">About Us</a></li> 
       </ul>
     </nav>
     
@@ -27,7 +27,7 @@
       <div class="menu-section"> <!-- Defines a section for a specific type of menu item -->
         <h2 class="menu-section-header">Pizzas</h2> <!-- Sets a sub-heading for this section -->
         <div class="menu-item"> <!-- Defines a specific menu item -->
-          <div class="menu-item-image"><img src="pepperoni-pizza.jpg"></div> <!-- Defines an image for the menu item -->
+          <div class="menu-item-image" id="pepperoni"><img src="images/pepperoni-pizza.jpg"></div> <!-- Defines an image for the menu item -->
           <div class="menu-item-details"> <!-- Defines a section for the details of the menu item -->
             <div class="menu-item-name">Pepperoni Pizza</div> <!-- Sets the name of the menu item -->
             <div class="menu-item-description">Tomato sauce, mozzarella cheese, pepperoni</div> <!-- Describes the menu item -->
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="menu-item">
-          <div class="menu-item-image"><img src="hawaiian-pizza.jpg"></div>
+          <div class="menu-item-image"><img src="images/hawaiian-pizza.jpg"></div>
           <div class="menu-item-details">
             <div class="menu-item-name">Hawaiian Pizza</div>
             <div class="menu-item-description">Tomato sauce, mozzarella cheese, ham, pineapple</div>
@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="menu-item">
-          <div class="menu-item-image"><img src="vegetarian-pizza.jpg"></div>
+          <div class="menu-item-image"><img src="images/vegetarian-pizza.jpg"></div>
           <div class="menu-item-details">
             <div class="menu-item-name">Vegetarian Pizza</div>
             <div class="menu-item-description">Tomato sauce, mozzarella cheese, mushrooms, bell peppers, onions</div>
@@ -54,7 +54,15 @@
       <div class="menu-section">
         <h2 class="menu-section-header">Sides</h2>
         <div class="menu-item">
-          <div class="menu-item-image"><img src="garlic-bread.jpg"></div>
+          <div class="menu-item-image"><img src="images/garlic-bread.jpg"></div>
+          <div id="popup">
+            <p>Image description</p>
+            <ul>
+              <li>Small</li>
+              <li>Medium</li>
+              <li>Large</li>
+            </ul>
+          </div>
           <div class="menu-item-details">
             <div class="menu-item-name">Garlic Bread</div>
             <div class="menu-item-description">Warm, garlic-flavored breadsticks</div>
@@ -62,7 +70,7 @@
           </div>
         </div>
         <div class="menu-item">
-          <div class="menu-item-image"><img src="mozzarella-sticks.jpg"></div>
+          <div class="menu-item-image"><img src="images/mozzarella-sticks.jpg"></div>
           <div class="menu-item-details">
             <div class="menu-item-name">Mozzarella Sticks</div>
             <div class="menu-item-description">Crispy breaded mozzarella cheese sticks</div>
@@ -70,7 +78,7 @@
           </div>
         </div>
         <div class="menu-item">
-          <div class="menu-item-image"><img src="chicken-wings.jpg"></div>
+          <div class="menu-item-image"><img src="images/chicken-wings.jpg"></div>
           <div class="menu-item-details">
             <div class="menu-item-name">Chicken Wings</div>
             <div class="menu-item-description">Crispy chicken wings with your choice of sauce</div>
@@ -81,7 +89,7 @@
       <div class="menu-section">
         <h2 class="menu-section-header">Desserts</h2>
         <div class="menu-item">
-          <div class="menu-item-image"><img src="chocolate-cake.jpg"></div>
+          <div class="menu-item-image"><img src="images/chocolate-cake.jpg"></div>
           <div class="menu-item-details">
             <div class="menu-item-name">Chocolate Cake</div>
             <div class="menu-item-description">Rich, moist chocolate cake with chocolate frosting</div>
@@ -89,7 +97,7 @@
           </div>
         </div>
         <div class="menu-item">
-          <div class="menu-item-image"><img src="apple-pie.jpg"></div>
+          <div class="menu-item-image"><img src="images/apple-pie.jpg"></div>
           <div class="menu-item-details">
             <div class="menu-item-name">Apple Pie</div>
             <div class="menu-item-description">Warm, flaky pie crust filled with sweet apple filling</div>
@@ -97,7 +105,7 @@
           </div>
         </div>
         <div class="menu-item">
-          <div class="menu-item-image"><img src="ice-cream.jpg"></div>
+          <div class="menu-item-image"><img src="images/ice-cream.jpg"></div>
           <div class="menu-item-details">
             <div class="menu-item-name">Ice Cream</div>
             <div class="menu-item-description">Creamy vanilla ice cream with your choice of toppings</div>
@@ -108,7 +116,37 @@
       
       <footer> <!-- Defines a footer section (information about the site or copyright information) -->
         <p>&copy; 2023 MO's Pizza</p> <!-- Sets the copyright information -->
+        <p>Call us at: <a href="tel: ">1-800-111-1111</a></p>
       </footer>
+
+      <script>
+        //Image and popup elements
+        let image = document.getElementById("pepperoni");
+        let popup = document.getElementById("popup");
+
+        //event listeners for mouse enter and leave on image
+        image.addEventListener("mouseenter", showPopup);
+        image.addEventListener("mouseleave", hidePopup);
+
+        //function to show and hide popup
+        function showPopup() {
+          //calculate the position of the pop-up relative to the image
+          const x = image.offsetLeft + image.offsetWidth / 2 - popup.offsetWidth / 2;
+          const y = image.offsetTop + image.offsetHeight;
+
+          //set the position of the pop-up
+          popup.style.left = x + "px";
+          popup.style.top = y + "px";
+
+          //show the pop-up
+          popup.style.display = "block";
+        }
+
+        function hidePopup(){
+          //Hide the pop-pup
+          popup.style.display = "none";
+        }
+      </script>
     </main> 
     
   </body>
