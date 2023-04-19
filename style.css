@@ -1,0 +1,569 @@
+body {
+  font-family: Arial, sans-serif; /* Sets the font family for the body text */
+  background-color: #ffffff; /* Sets the background color for the body */
+  background-image: radial-gradient(#ffffff,#ffe489,#ffffff); /* Sets a radial gradient background image for the body */
+  color: #333333; /* Sets the text color for the body */
+}
+
+header {
+  background-color: #b06100; /* Sets the background color for the header */
+  color: #ffffff; /* Sets the text color for the header */
+  text-align: center; /* Centers the text within the header */
+  padding: 20px; /* Adds padding around the content within the header */
+}
+
+nav {
+  position: relative; /* Sets the position of the navigation to relative */
+  text-align: center; /* Centers the text within the navigation */
+}
+
+nav ul {
+  list-style: none; /* Removes the bullet points from the list items */
+  margin: 0; /* Removes any margin around the unordered list */
+  padding: 0; /* Removes any padding around the unordered list */
+}
+
+nav li {
+  display: inline-block; /* Displays the list items horizontally */
+  margin: 0 10px; /* Adds a margin to the left and right of each list item */
+}
+
+nav a {
+  display: block; /* Sets the display of the links to block */
+  padding: 10px; /* Adds padding around the links */
+  color: #ffffff; /* Sets the text color for the links */
+  background-color: #ff8c00; /* Sets the background color for the links */
+  text-decoration: none; /* Removes the underline from the links */
+  border-radius: 5px; /* Adds rounded corners to the links */
+  font-size: 20px; /* Sets the font size for the links */
+}
+
+nav a:hover {
+  background-color: #d47b00; /* Sets the background color for the links when hovered over */
+}
+
+nav a:active {
+  background-color: #c27200; /* Sets the background color for the links when clicked */
+}
+
+button {
+  font-size: 18px; /* Increases the font size of the button */
+  padding: 15px; /* Increases the padding of the button */
+  margin-right: 10px;
+  margin-bottom: 20px;
+  background-color: #d27401e4;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px; /* Adds rounded corners to the button */
+  transition: background-color 0.3s ease; /* Adds a smooth transition effect to the button color */
+}
+
+button:hover {
+  background-color: #ff9500; /* Sets the background color for the button when hovered over */
+}
+
+button:active {
+  background-color: #a56100; /* Sets the background color for the button when clicked */
+}
+
+main{
+  min-height: 70vh;
+  padding-left:24px; 
+  margin-top: 2px; 
+  text-align: justify;
+  padding-right: 30px;
+}
+
+
+.mainhead{
+  text-align: center;
+}
+
+.menu {
+  margin: 0 auto; /* Centers the menu section within its container */
+  max-width: 1000px; /* Sets the maximum width for the menu section */
+}
+
+.menu-section {
+  margin-bottom: 50px; /* Adds a margin to the bottom of each menu section */
+}
+
+.menu-section-header {
+  font-size: 36px; /* Sets the font size for the section headers */
+  font-weight: bold; /* Sets the font weight for the section headers to bold */
+  margin-bottom: 20px; /* Adds a margin to the bottom of each section header */
+}
+
+.menu-item {
+  display: flex; /* Displays the menu items as a flexbox */
+  flex-direction: row; /* Sets the direction of the flexbox to row */
+  margin-bottom: 30px; /* Adds a margin to the bottom of each menu item */
+}
+
+.menu-item-image {
+  width: 200px; /* Sets the width of the menu item image */
+  height: 150px; /* Sets the height of the menu item image */
+  margin-right: 20px; /* Adds a margin to the right of the menu item image */
+  background-color: #ffffff; /* Sets the background color for the menu item image */
+  overflow: hidden; /* Hides any overflow from the menu item image */
+}
+
+.menu-item-image img {
+  width: 100%; /* Sets the width of the menu item image to 100% */
+  height: 100%; /* Sets the height of the menu item image to 100% */
+  object-fit: cover; /* Ensures the entire image is visible within the menu item image container */
+  object-position: center; /* Centers the image within the menu item image container */
+}
+
+.menu-item-details {
+  display: flex; /* Displays the menu item details as a flexbox */
+  flex-direction: column; /* Sets the direction of the flexbox to column */
+  justify-content: center; /* Centers the content within the menu item details */
+  flex-grow: 1; /* Allows the menu item details to grow to fill the available space */
+}
+
+.menu-item-name {
+  font-size: 24px; /* Sets the font size for the menu item name */
+  font-weight: bold; /* Sets the font weight for the menu item name to bold */
+  margin-bottom: 10px; /* Adds a margin to the bottom of the menu item name */
+}
+
+.menu-item-description {
+  font-size: 16px; /* Sets the font size for the menu item description */
+  margin-bottom: 10px; /* Adds a margin to the bottom of the menu item description */
+}
+
+.menu-item-price {
+  padding: 10px;
+  font-size: 20px; /* Sets the font size for the menu item price */
+  font-weight: bold; /* Sets the font weight for the menu item price to bold */
+  color: #732e00; /* Sets the text color for the menu item price */
+}
+
+.popup {
+  visibility: hidden;
+  position: absolute;
+  width: 40%;
+  background-color: #a3a121;
+  padding: 20px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.menu-item-image:hover .popup {
+  visibility: visible;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px; /* Set the width of your logo */
+  height: auto; /* Auto height to preserve aspect ratio */
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    margin-bottom: 20px; /* Adds a margin to the bottom of the navigation on smaller screens */
+  }
+
+  nav li {
+    display: block; /* Displays the list items vertically on smaller screens */
+    margin: 10px 0; /* Adds a margin to the top and bottom of each list item on smaller screens */
+  }
+
+  .menu-section {
+    margin-bottom: 30px; /* Adds a larger margin to the bottom of each menu section on smaller screens */
+  }
+
+  .menu-item {
+    flex-direction: column; /* Sets the direction of the menu item flexbox to column on smaller screens */
+    margin-bottom: 20px; /* Adds a smaller margin to the bottom of each menu item on smaller screens */
+  }
+
+  .menu-item-image {
+    width: 100%; /* Sets the width of the menu item image to 100% on smaller screens */
+    height: auto; /* Allows the height of the menu item image to adjust automatically on smaller screens */
+    margin-right: 0; /* Removes the margin to the right of the menu item image on smaller screens */
+    margin-bottom: 10px; /* Adds a margin to the bottom of the menu item image on smaller screens */
+  }
+}
+
+.abt-img {
+  width: 200px !important;
+  height: 200px !important;
+  margin: 0 auto;
+  background-color: #ffffff;
+  margin-right: 20px;
+}
+
+.abt-img img{
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.about-content-wrapper{
+  display: block !important;
+  
+}
+
+.aboutsection {
+  clip-path: none !important;
+}
+
+footer {
+  background-color: #b06100; /* Sets the background color for the footer */
+  color: #ffffff; /* Sets the text color for the footer */
+  text-align: center; /* Centers the text within the footer */
+  display: grid;
+  justify-items: center;
+  padding: 20px; /* Adds padding around the content within the footer */
+}
+
+@media screen and (min-width: 801px) {
+  .homepage-navbar {
+    position: relative;
+    text-align: center;
+    list-style: none;
+    margin-top: 22px;
+  }
+
+  .homepage-navbar > ul{
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding-top: 5px;
+  }
+
+  .homepage-navbar >ul li{
+    width: 20%;
+  }
+
+  nav {
+    position: fixed; /* Sets the position of the navigation to fixed on larger screens */
+    top: 50%; /* Sets the top of the navigation to 50% of the screen */
+    right: 0; /* Sets the right of the navigation to 0 */
+    transform: translateY(-50%); /* Centers the navigation vertically */
+    text-align: center; /* Centers the text within the navigation */
+  }
+
+  nav ul {
+    display: flex; /* Displays the navigation list items as a flexbox */
+    flex-direction: column; /* Sets the direction of the flexbox to column */
+    justify-content: center; /* Centers the content within the navigation */
+    height: 100vh; /* Sets the height of the navigation to the full height of the viewport */
+    margin: 0; /* Removes the margin around the navigation list */
+    padding: 0; /* Removes the padding around the navigation list */
+  }
+
+  nav li {
+    display: block; /* Displays the list items vertically on larger screens */
+    margin: 0; /* Removes the margin around the navigation list items */
+  }
+}
+
+/* form styles */
+section {
+  margin-top: 50px; /*sets margin top to 50px*/
+  margin-bottom: 50px; /*sets margin bottom to 50px*/
+}
+
+.inputField {
+margin: 4px 0px; /*seta margin top and bottom to 4px and left and right to 0px*/
+}
+
+section.contact-us #contact {
+  position: relative; /*this sets the position to relative*/
+  display: block; /*sets the display to block*/
+  width: 380px; /*sets with to 380px*/
+  height: auto; /*sets height to auto*/
+  background-color: #fff; /*sets background color to white*/
+  padding: 40px; /*sets padding for the whole thing to 40px*/
+  margin-left: auto; /*sets margin left to auto*/
+  margin-right: auto; /*sets margin right to auto*/
+  border-radius: 15px; /*sets border radius to 15px*/
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05); /*sets horizontal offset to 0px, vertical
+  offset to 0px, blur radius to 15px, and a rgba color (0, 0, 0, 0.05)*/
+}
+
+section.contact-us .section-heading {
+  position: relative; 
+  display: block; 
+  margin: auto; 
+}
+
+.section-heading h2 {
+  line-height: 40px; /*sets line height 40px*/
+  font-size: 28px; /*sets font size to 28px*/
+  font-weight: 900; /*sets font wright to 900*/
+  color: #5733b9; /*sets color to a shade of purple*/
+  text-align: center; /*aligns text to center*/
+  text-transform: uppercase; /*sets text to uppercase*/
+  margin-bottom: 40px; /*sets bottom margin to 40px*/
+}
+
+.text-input, .area-input {
+  width: 350px; 
+  position: relative;
+  display: block;
+  background-color: #f4f7fb;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  border: none; /*removes any border in the given elements*/
+  box-shadow: none; /*removes any box shadow*/
+  border-radius: 5px; /*sets border radius to 5px*/
+  outline-color: #9e9e9e; /*sets outline color to a shade of grey*/
+}
+
+.text-input {
+  height: 40px;
+  padding: 0px 15px;
+}
+
+.area-input {
+  min-height: 140px; /*sets min height to 140px*/
+  max-height: 180px; /*sets max height toi 180px*/
+  padding: 15px;
+  resize: none; /*disables the ability to resize the element*/
+}
+
+.contact-us span {
+  height: 20px; 
+	font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-flex; /*allows element to be displayed inline with other elements and also flexible*/
+  width: 100%; 
+  justify-content: flex-end; /*aligns contents of the selected elemment to the right side of the container*/
+}
+
+#form-submit {
+  position: relative;
+  display: inline-block; /*allows inline display with a width and height*/
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px; /*sets letter spacing to 1px*/
+  text-transform: uppercase; /*sets text to transform to uppercase*/
+  color: #fff;
+  background: rgb(219,138,222); /*sets background color to a shade of pink-purle*/
+  background: linear-gradient(-145deg, rgb(68, 165, 68) 0%, rgb(56, 81, 190) 100%); /*linear gradient from green to blue*/
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer; /*changes the cursor to a pointer when hovered over the element*/
+  transition: all .3s; /*sets a transition effect for all CSS properties that will take0.3s to complete*/
+}
+
+#form-submit:disabled {
+  border: 1px solid #9e9e9e; /**/
+  background: transparent;
+  color: #9e9e9e;
+  transition: none; /*disables any css transitions*/
+  transform: none; /*disables any css transformations*/
+  cursor: default;
+}
+
+#form-submit:hover:disabled{
+  border: 1px solid #9e9e9e;
+  color: #9e9e9e;
+  background: transparent;
+  transition: none; /*disables any css transitions*/
+  transform: none; /*disables any css transformations*/
+  cursor: default;
+}
+
+button:active {
+	transform: scale(0.95); /*reduces the size of the button by 5%*/
+}
+
+button:focus {
+	outline: none; /*removes the default focus outline*/
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+/* Newsletter style */
+.newsletter-container{
+  display: flex; /*sets the display property to flex, allowing the child elements align in a flexible row or column*/
+  padding: 3rem; 
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; 
+  justify-content: center; 
+  align-items: center; 
+  /* height: 50vh; */
+}
+
+.newsletter-wrapper{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; 
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem; 
+  margin-left: auto;
+  margin-right: auto; 
+  background-color: #1D4ED8; 
+  width: 100%; 
+  max-width: 1024px;
+}
+
+.newsletter-grid{
+  display: grid; /*sets display property to grid, makes the child elements align in a grid*/
+  gap: 1.25rem;  /*sets a gap between grid cells*/
+}
+
+@media (min-width: 768px) {
+  .newsletter-grid{ 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /*two column grid with equal widths, where each column takes 0px and most available space*/
+    gap: 2.5rem;
+  } 
+}
+
+@media (min-width: 1024px) { 
+  .newsletter-grid{
+    gap: 5rem; 
+  }
+  .newsletter-button{
+    width: 50%;
+  }
+}
+
+.newsletter-grid-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-image{
+  width: 100%;
+  max-width: 24rem;
+}
+
+.content-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.title-wrapper{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-wrapper p{
+  margin-top: 0.5rem; 
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+}
+
+.newsletter-form{
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column; /*stacks elements of the flex container vertically*/
+}
+
+.newsletter-input{
+  padding-top: 0.5rem;
+  padding-left: 0.75rem;
+  padding-bottom: 0.5rem; 
+  background-color: #FFFFFF; 
+  padding-right: 0.75rem; 
+  width: 80%; 
+  color: #000; 
+  border-width: 1px;
+  border-radius: 0.25rem;
+  height: 40px; 
+}
+
+.newsletter-button {
+  padding-top: 0.5rem;
+  padding-left: 3.5rem;
+  padding-bottom: 0.5rem; 
+  margin-top: 1rem; 
+  padding-right: 3.5rem; 
+  text-align: center; 
+  color: #ffffff;
+  background-color: #d47b00; 
+  border-radius: 0.25rem;
+  width: 80%;
+  height: 48px;
+  font-size: larger;
+}
+
+.title-wrapper h3 {
+  color: #ffffff; 
+  font-size: 2.25rem;
+  line-height: 2.5rem; 
+  font-weight: 700;
+}
+
+/* About section style */
+.aboutsection {
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /*polygon shape that starts at the top left corner and ends at the bottom left corner*/
+  padding-bottom: 10%;
+  background-color: coral;
+}
+
+.about-container {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.title {
+  font-size: 2em;
+  text-align: center;
+}
+
+.about-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.img-wrapper {
+  width: 50%;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  margin-right: 20px;
+}
+
+.text-wrapper {
+  width: 50%;
+}
+
+.text {
+  margin-bottom: 1em;
+}
+
+.abt-btn-wrapper {
+  margin-top: 2em;
+}
+
+.abt-btn {
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid #fff;
+  padding: 0.5em 2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out; /*sets transition property to apply all CSS property with a 0.2s and an easing function which creates a smooth transition effect when properties change*/
+}
+
+.abt-btn:hover {
+  background-color: #fff;
+  color: coral;
+}
