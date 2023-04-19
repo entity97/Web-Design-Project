@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Contact Us</title>
+    <!-- Sets the title of the page, which appears in the browser's title bar -->
+    <link rel="stylesheet" href="style.css" >
+    <!-- Links to an external stylesheet file -->
+    <link rel="icon" type="image/png" href="favicon.png" >
+    <!-- Links to a favicon file, which is the icon that appears in the browser's tab or bookmarks bar -->
+  </head>
+
+  <body>
+
+    <header>
+      <img src="favicon.png" alt="Logo" class="logo">
+
+      <!-- Defines a header section -->
+      <h1>We are here for you!</h1>
+      <!-- Sets the main heading for the page -->
+    </header>
+
+    <nav id="mynav">
+      <!-- Defines a navigation section -->
+      <ul>
+        <!-- An unordered list -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="contact-us" id="contact-section">
+        <form id="contact" action="http://webdevbasics.net/scripts/demo.php" method="post">
+         
+          <div class="section-heading">
+            <h2>Contact Our Amazing Team</h2>
+          </div>
+    
+          <div class="inputField">
+            <input type="text" name="name" id="name" class= "text-input" placeholder="Your name" autocomplete="on" required>
+            <span class="valid_info_name"></span>
+          </div>
+    
+          <div class="inputField">
+            <input type="email" name="email" id="email" class= "text-input" placeholder="Your email" required="" >
+            <span class="valid_info_email"></span>
+          </div>
+    
+          <div class="inputField">
+            <textarea name="message" id="message" class="area-input" placeholder="Your message"></textarea>
+            <span class="valid_info_message"></span>
+          </div>
+    
+          <div class="inputField btn">
+            <button type="submit" id="form-submit" class="main-gradient-button" >Send a message</button>
+          </div>
+    
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Defines a footer section (information about the site or copyright information) -->
+      <p>&copy; 2023 MO's Pizza</p>
+      <!-- Sets the copyright information -->
+      <p>Call us at: <a href="tel: ">1-800-111-1111</a></p>
+    </footer>
+
+    <script>
+      const navbar = document.querySelector("#mynav");
+
+      navbar.classList.add("homepage-navbar");
+    </script>
+  </body>
+</html>
