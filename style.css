@@ -189,29 +189,44 @@ main{
     margin-right: 0; /* Removes the margin to the right of the menu item image on smaller screens */
     margin-bottom: 10px; /* Adds a margin to the bottom of the menu item image on smaller screens */
   }
-}
-
-.abt-img {
-  width: 200px !important;
-  height: 200px !important;
-  margin: 0 auto;
-  background-color: #ffffff;
-  margin-right: 20px;
-}
-
-.abt-img img{
-  width: 200px !important;
-  height: 200px !important;
-}
-
-.about-content-wrapper{
-  display: block !important;
   
+  .abt-img {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-right: 20px;
+  }
+  
+  #contact-section{
+    overflow-x: scroll;
+    width: 100%;
+  }
+  
+  .abt-img {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-right: 20px;
+  }
+  
+  .abt-img img{
+    width: 200px !important;
+    height: 200px !important;
+  }
+  
+  .about-content-wrapper{
+    display: block !important;
+    
+  }
+  
+  .aboutsection {
+    clip-path: none !important;
+  }
 }
 
-.aboutsection {
-  clip-path: none !important;
-}
+
 
 footer {
   background-color: #b06100; /* Sets the background color for the footer */
@@ -510,6 +525,7 @@ button.ghost {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /*polygon shape that starts at the top left corner and ends at the bottom left corner*/
   padding-bottom: 10%;
   background-color: coral;
+  padding-top: 2%;
 }
 
 .about-container {
@@ -533,7 +549,13 @@ button.ghost {
   width: 50%;
 }
 
-.img {
+.img-wrapper img{
+  width: 300px;
+  height: 300px;
+}
+
+
+.abt-img {
   width: 300px;
   height: 300px;
   margin: 0 auto;
